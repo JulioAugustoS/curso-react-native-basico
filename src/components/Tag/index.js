@@ -1,14 +1,16 @@
 import React from 'react'
-import { View } from 'react-native'
 
 // Components
 import { Title } from '../index'
 
+// Styles
+import * as S from './styles'
+
 const Tag = ({ text }) => {
   return (
-    <View>
-      <Title text={text} />
-    </View>
+    <S.Container>
+      <Title color="gray3" size={11} weight="bold">{text}</Title>
+    </S.Container>
   )
 }
 
