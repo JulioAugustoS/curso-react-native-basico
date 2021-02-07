@@ -1,17 +1,19 @@
 import React from 'react'
-import { View } from 'react-native'
 
 // Components
 import { Icon, Title } from '../index'
 
+// Styles
+import * as S from './styles'
+
 const ItemList = ({ icon, text }) => {
   return (
-    <View>
+    <S.Container>
       <Icon uri={icon} />
-      <View>
-        <Title text={text} />
-      </View>
-    </View>
+      <S.Desc>
+        <Title size={16} color="gray3">{text}</Title>
+      </S.Desc>
+    </S.Container>
   )
 }
 
