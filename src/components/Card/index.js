@@ -1,11 +1,13 @@
 import React from 'react'
-import { View, Image } from 'react-native'
+
+// Styles
+import * as S from './styles'
 
 const Card = ({ uri }) => {
   return (
-    <View>
-      <Image source={uri} resizeMode="contain" />
-    </View>
+    <S.Container>
+      <S.Img source={uri} resizeMode="contain" />
+    </S.Container>
   )
 }
 
