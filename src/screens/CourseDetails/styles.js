@@ -18,3 +18,7 @@ export const Section = styled.View`
 export const List = styled.View`
   margin-top: 14px;
 `
+
+export const ButtonContent = styled.View`
+  align-items: flex-end;
+`

@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native'
 import YoutubePlayer from "react-native-youtube-iframe";
 
 // Components
-import { Container, Content, Title, Icon, ItemList, TextArea } from '../../components'
+import { Container, Content, Title, Icon, ItemList, TextArea, Button } from '../../components'
 
 // Styles
 import * as S from './styles'
@@ -36,7 +36,7 @@ const CourseDetails = () => {
 
         <S.Section>
           <Title size={18} weight={600} color="gray2">Descrição</Title>
-          <Title size={16} color="gray2">
+          <Title size={16} color="gray3">
             Aprenda a criar aplicações com NodeJs utilizando o framework Express, se conectando a bancos de dados relacionais e não relacionais, tudo isso utilizando o JavaScript do lado do servidor.
           </Title>
         </S.Section>
@@ -59,6 +59,9 @@ const CourseDetails = () => {
             numberOfLines={5}
             placeholder="Deixe seu comentário"
           />
+          <S.ButtonContent>
+            <Button title="Publicar" onPress={() => {}} />
+          </S.ButtonContent>
         </S.Section>
       </Content>
     </Container>
