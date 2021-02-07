@@ -1,14 +1,16 @@
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
 
 // Components
 import { Title } from '../index'
 
-const Button = ({ title, onPress }) => {
+// Styles
+import * as S from './styles'
+
+const Button = ({ title, onPress, size }) => {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <Title text={title} />
-    </TouchableOpacity>
+    <S.Container onPress={onPress} size={size}>
+      <Title size={16} weight="bold" color="white">{title}</Title>
+    </S.Container>
   )
 }
 
