@@ -3,13 +3,14 @@ import { TouchableOpacity } from 'react-native'
 import YoutubePlayer from "react-native-youtube-iframe";
 
 // Components
-import { Container, Content, Title, Icon } from '../../components'
+import { Container, Content, Title, Icon, ItemList } from '../../components'
 
 // Styles
 import * as S from './styles'
 
 // Images
 import starImg from '../../assets/icons/star.png'
+import checkImg from '../../assets/icons/check.png'
 
 const CourseDetails = () => {
   return (
@@ -24,8 +25,8 @@ const CourseDetails = () => {
       <Content>
         <S.InfosBase>
           <S.Infos>
-            <Title size={18} weight="bold" color="green">Introdução ao React</Title>
-            <Title color="gray2">Julio Augusto</Title>
+            <Title size={18} weight="bold" color="green">Introdução ao NodeJS</Title>
+            <Title size={16} color="gray2">Julio Augusto</Title>
             <Title color="gray2">12 hrs</Title>
           </S.Infos>
           <TouchableOpacity onPress={() => {}}>
@@ -35,13 +36,20 @@ const CourseDetails = () => {
 
         <S.Section>
           <Title size={18} weight={600} color="gray2">Descrição</Title>
-          <Title color="gray2">
+          <Title size={16} color="gray2">
             Aprenda a criar aplicações com NodeJs utilizando o framework Express, se conectando a bancos de dados relacionais e não relacionais, tudo isso utilizando o JavaScript do lado do servidor.
           </Title>
         </S.Section>
 
         <S.Section>
           <Title size={18} weight={600} color="gray2">Conteudo</Title>
+          <S.List>
+            <ItemList icon={checkImg} text="Introdução do NodeJS" />
+            <ItemList icon={checkImg} text="Donwload e instalação do NodeJS" />
+            <ItemList icon={checkImg} text="Executando arquivos JavaScript no Node" />
+            <ItemList icon={checkImg} text="Respondendo requisições HTTP com Node" />
+            <ItemList icon={checkImg} text="Visão geral do NPM, Express e Nodemon" />
+          </S.List>
         </S.Section>
       </Content>
     </Container>
