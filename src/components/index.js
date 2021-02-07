@@ -5,6 +5,8 @@ import Card from './Card'
 import ItemList from './ItemList'
 import Icon from './Icon'
 import Button from './Button'
+import Container from './Container'
+import Content from './Content'
 
 export {
   Title,
@@ -13,5 +15,7 @@ export {
   Card,
   ItemList,
   Icon,
-  Button
+  Button,
+  Container,
+  Content
 }
