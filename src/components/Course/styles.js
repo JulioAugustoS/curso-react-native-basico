@@ -4,6 +4,7 @@ export const Container = styled.TouchableOpacity`
   width: 130px;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 20px;
 `
 
 export const Content = styled.View`
