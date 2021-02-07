@@ -14,3 +14,7 @@ export const Infos = styled.View``
 export const Section = styled.View`
   margin-top: 30px;
 `
+
+export const List = styled.View`
+  margin-top: 14px;
+`
