@@ -8,6 +8,7 @@ import Button from './Button'
 import Container from './Container'
 import Content from './Content'
 import TextArea from './TextArea'
+import Comment from './Comment'
 
 export {
   Title,
@@ -19,5 +20,6 @@ export {
   Button,
   Container,
   Content,
-  TextArea
+  TextArea,
+  Comment
 }
