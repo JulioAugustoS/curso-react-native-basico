@@ -3,7 +3,16 @@ import { TouchableOpacity } from 'react-native'
 import YoutubePlayer from "react-native-youtube-iframe";
 
 // Components
-import { Container, Content, Title, Icon, ItemList, TextArea, Button } from '../../components'
+import {
+  Container,
+  Content,
+  Title,
+  Icon,
+  ItemList,
+  TextArea,
+  Button,
+  Comment
+} from '../../components'
 
 // Styles
 import * as S from './styles'
@@ -11,11 +20,16 @@ import * as S from './styles'
 // Images
 import starImg from '../../assets/icons/star.png'
 import checkImg from '../../assets/icons/check.png'
+import circleImg from '../../assets/icons/circle.png'
+import chevronLeftImg from '../../assets/icons/chevron-left.png'
 
 const CourseDetails = () => {
   return (
     <Container>
       <S.ContentPlayer>
+        <S.BackButton>
+          <Icon uri={chevronLeftImg} />
+        </S.BackButton>
         <YoutubePlayer
           height={250}
           play={false}
@@ -62,6 +76,18 @@ const CourseDetails = () => {
           <S.ButtonContent>
             <Button title="Publicar" onPress={() => {}} />
           </S.ButtonContent>
+        </S.Section>
+
+        <S.Section>
+          <Title color="black">2 comentários neste curso</Title>
+          <Comment
+            photo={circleImg}
+            comment="Ja tentei todas as soluções apresentadas. quanto tento reinstalar com a mudança sugerida, o mysql nem instala, fica dando erro."
+          />
+          <Comment
+            photo={circleImg}
+            comment="Estava com o mesmo problema, fiz da forma que o Victor disse e deu certo. Obrigado!"
+          />
         </S.Section>
       </Content>
     </Container>
