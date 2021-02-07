@@ -1,10 +1,16 @@
 import React from 'react'
 import { View } from 'react-native'
 
-const ItemList = () => {
+// Components
+import { Icon, Title } from '../index'
+
+const ItemList = ({ icon, text }) => {
   return (
     <View>
-
+      <Icon uri={icon} />
+      <View>
+        <Title text={text} />
+      </View>
     </View>
   )
 }
