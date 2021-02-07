@@ -6,9 +6,9 @@ import { Title, Tag, Card } from '../index'
 // Styles
 import * as S from './styles'
 
-const Course = ({ image, title, nivel, time }) => {
+const Course = ({ image, title, nivel, time, onPress }) => {
   return (
-    <S.Container>
+    <S.Container onPress={onPress}>
       <Card uri={image} />
       <S.Content>
         <Title weight="bold" color="black">{title}</Title>
