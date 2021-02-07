@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Image } from 'react-native'
 
-const Card = ({ image }) => {
+const Card = ({ uri }) => {
   return (
     <View>
-      <Image source={image} resizeMode="contain" />
+      <Image source={uri} resizeMode="contain" />
     </View>
   )
 }
