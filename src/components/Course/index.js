@@ -4,12 +4,12 @@ import { View } from 'react-native'
 // Components
 import { Title } from '../index'
 
-const Course = () => {
+const Course = ({ image, title, time }) => {
   return (
     <View>
-      <Title>React</Title>
+      <Title text={title} />
       <View>
-        <Title>12 hrs</Title>
+        <Title text={`${time} hrs`} />
       </View>
     </View>
   )
