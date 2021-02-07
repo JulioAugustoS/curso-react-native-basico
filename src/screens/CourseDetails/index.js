@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native'
 import YoutubePlayer from "react-native-youtube-iframe";
 
 // Components
-import { Container, Content, Title, Icon, ItemList } from '../../components'
+import { Container, Content, Title, Icon, ItemList, TextArea } from '../../components'
 
 // Styles
 import * as S from './styles'
@@ -50,6 +50,15 @@ const CourseDetails = () => {
             <ItemList icon={checkImg} text="Respondendo requisições HTTP com Node" />
             <ItemList icon={checkImg} text="Visão geral do NPM, Express e Nodemon" />
           </S.List>
+        </S.Section>
+
+        <S.Section>
+          <Title size={18} weight={600} color="gray2">Comentários</Title>
+          <TextArea
+            multiline={true}
+            numberOfLines={5}
+            placeholder="Deixe seu comentário"
+          />
         </S.Section>
       </Content>
     </Container>
