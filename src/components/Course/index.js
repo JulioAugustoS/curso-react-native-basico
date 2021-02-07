@@ -2,14 +2,17 @@ import React from 'react'
 import { View } from 'react-native'
 
 // Components
-import { Title } from '../index'
+import { Title, Tag } from '../index'
 
-const Course = ({ image, title, time }) => {
+const Course = ({ image, title, nivel, time }) => {
   return (
     <View>
-      <Title text={title} />
       <View>
-        <Title text={`${time} hrs`} />
+        <Title text={title} />
+        <View>
+          <Tag text={nivel} />
+          <Title text={`${time} hrs`} />
+        </View>
       </View>
     </View>
   )
