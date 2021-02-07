@@ -1,21 +1,23 @@
 import React from 'react'
-import { View } from 'react-native'
 
 // Components
 import { Title, Tag, Card } from '../index'
 
+// Styles
+import * as S from './styles'
+
 const Course = ({ image, title, nivel, time }) => {
   return (
-    <View>
+    <S.Container>
       <Card uri={image} />
-      <View>
-        <Title text={title} />
-        <View>
+      <S.Content>
+        <Title weight="bold" color="black">{title}</Title>
+        <S.Infos>
           <Tag text={nivel} />
-          <Title text={`${time} hrs`} />
-        </View>
-      </View>
-    </View>
+          <Title weight="bold" color="gray3">{`${time} hrs`}</Title>
+        </S.Infos>
+      </S.Content>
+    </S.Container>
   )
 }
 
