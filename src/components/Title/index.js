@@ -1,12 +1,9 @@
-import React from 'react'
-import { Text } from 'react-native' 
+import styled from 'styled-components/native'
 
-const Title = ({ text }) => {
-  return (
-    <Text>
-      {text}
-    </Text>
-  )
-}
+const Title = styled.Text`
+  font-size: ${({ size }) => size || 14}px;
+  font-weight: ${({ weight }) => weight || 'normal'};
+  color: ${({ theme, color }) => color && theme.colors[color] || theme.colors.black};
+`
 
 export default Title
