@@ -7,8 +7,12 @@ export const Container = styled.View`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   elevation: 2;
 `
 
-export const Img = styled.Image``
+export const Img = styled.Image`
+  /* Adicionar width e height no styles da imagem */
+  width: 70%;
+  height: 70%;
+`
