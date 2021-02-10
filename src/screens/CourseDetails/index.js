@@ -2,6 +2,9 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import YoutubePlayer from "react-native-youtube-iframe";
 
+// Context
+import { useCourses } from '../../context/courses'
+
 // Components
 import {
   Container,
@@ -24,6 +27,10 @@ import circleImg from '../../assets/icons/circle.png'
 import chevronLeftImg from '../../assets/icons/chevron-left.png'
 
 const CourseDetails = () => {
+  const { coursesList } = useCourses()
+
+  console.log("LIST: ", coursesList)
+
   return (
     <Container>
       <S.ContentPlayer>
