@@ -11,8 +11,8 @@ import CourseDetails from './screens/CourseDetails'
 const App = () => {
   return (
     <ThemeProvider theme={light}>
-      {/* <Home /> */}
-      <CourseDetails />
+      <Home />
+      {/* <CourseDetails /> */}
     </ThemeProvider>
   )
 }
