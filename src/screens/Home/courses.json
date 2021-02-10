@@ -1,0 +1,186 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "category": "Desenvolvimento",
+      "courses": [
+        {
+          "id": 1,
+          "name": "Javascript",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+          "description": "Crie sistemas profissionais e repletos de interatividade com o JavaScript. Você vai dominar orientação a objetos, filter, map, reducer, promises e mais.",
+          "duration": "19 hrs",
+          "level": "Iniciante",
+          "teacher": "Júlio Augusto",
+          "content": [
+              "Introdução ao Javascript",
+              "O Básico de Var, Let e Const",
+              "Tipos em JavaScript: Number",
+              "Number: Alguns Cuidados",
+              "Tipos em JavaScript: String",
+              "Tipos em JavaScript: Array"
+          ]
+        },
+        {
+          "id": 2,
+          "category": "Desenvolvimento",
+          "name": "React",
+          "logo": "https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "description": "Domine a criação de aplicativos web com o React e Redux. Desde aplicações simples às mais complexas com usos de Rotas protegidas e muito mais.",
+          "duration": "12 hrs",
+          "level": "Iniciante",
+          "teacher": "Júlio Augusto",
+          "content": [
+              "Introdução ao React",
+              "Download e instalação do ambiente"
+          ]
+        },
+        {
+          "id": 3,
+          "category": "Desenvolvimento",
+          "name": "NodeJS",
+          "logo": "https://img.favpng.com/13/6/10/node-js-javascript-software-developer-computer-icons-angularjs-png-favpng-0kNgN4r1QbxCLtMPy1uv9yrhw_t.jpg",
+          "description": "Crie sistemas web dinâmicos e complexos que rodam no back end. Faça aplicações utilizando REST, Socket, Express e outros módulos.",
+          "duration": "12 hrs",
+          "level": "Iniciante",
+          "teacher": "Júlio Augusto",
+          "content": [
+              "Introdução ao NodeJS",
+              "Download e instalação do ambiente",
+              "Executando arquivos javascript no NodeJS",
+              "Respondendo requisições HTTP"
+          ]
+        },
+        {
+          "id": 4,
+          "category": "Desenvolvimento",
+          "name": "Swift",
+          "logo": "https://developer.apple.com/swift/images/swift-og.png",
+          "description": "O curso completo de swift possui 30 aulas, nele o aluno aprenderá a trabalhar com essa nova linguagem lançada pela apple, ela substitui a antiga Objective C que por 20 anos foi utilizada para os desenvolvimentos MAC, IOS e outros da apple, neste curso é mostrado o passo a passo da documentação desta excelente linguagem, adquira já o curso e aprenda a programar com swift.",
+          "duration": "22 hrs",
+          "level": "Avançado",
+          "teacher": "Júlio Augusto",
+          "content": [
+              "Introdução ao Swift",
+              "Download e instalação do ambiente",
+              "Sintaxe da Linguagem",
+              "Constantes e Variaveis",
+              "Concatenando variaveis"
+          ]
+        },
+        {
+          "id": 5,
+          "category": "Desenvolvimento",
+          "name": "GO",
+          "logo": "https://seeklogo.com/images/G/go-logo-046185B647-seeklogo.com.png",
+          "description": "Nesse curso você vai aprender a linguagem Go, criada pelo Google para poder ter alto poder de processamento utilizando pouco recursos.",
+          "duration": "23 hrs",
+          "level": "Iniciante",
+          "teacher": "Júlio Augusto",
+          "content": [
+              "Introdução ao GO",
+              "Download e instalação do ambiente",
+              "Configurando GOPATH",
+              "Instalando IDE e ferramentas",
+              "Sintaxe da Linguagem"
+          ]
+        },
+        {
+          "id": 6,
+          "category": "Desenvolvimento",
+          "name": "Android",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png",
+          "description": "Na Formação Android você vai aprender a construir Apps do zero. Desde dominar a IDE Android Studio e entender os fundamentos do framework do Android, até criar funcionalidades complexas, como integração com serviços externos, além de sincronização de dados off-line.",
+          "duration": "33 hrs",
+          "level": "Avançado",
+          "teacher": "Júlio Augusto",
+          "content": [
+              "Introdução ao Android",
+              "Download e instalação do ambiente",
+              "Sintaxe da Linguagem",
+              "Constantes e Variaveis",
+              "Concatenando variaveis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "UI/UX",
+      "courses": [
+        {
+          "id": 7,
+          "name": "Figma",
+          "logo": "https://seeklogo.com/images/F/figma-logo-E4E21D3AEA-seeklogo.com.png",
+          "description": "Aprenda a trabalhar com Design Digital com esta ferramenta de interface simples e intuitiva, para alcançar ótimos resultados e destacar-se profissionalmente como UI designer.",
+          "duration": "27 hrs",
+          "level": "Avançado",
+          "teacher": "Raul Souza",
+          "content": [
+              "Introdução ao Figma",
+              "Auto-layout no Figma",
+              "Tipografias para tela",
+              "Trabalhando com cores em interfaces"
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Sketch",
+          "logo": "https://cdn.worldvectorlogo.com/logos/sketch-2.svg",
+          "description": "Aprenda design de sites e aplicativos com o software pioneiro do mercado para design de interface (UI) como um profissional.",
+          "duration": "23 hrs",
+          "level": "Iniciante",
+          "teacher": "Raul Souza",
+          "content": [
+              "Introdução ao Sketch",
+              "Auto-layout no Sketch",
+              "Tipografias para tela",
+              "Trabalhando com cores em interfaces"
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Zeplin",
+          "logo": "https://zeplin.io/img/favicon/228x228.png",
+          "description": "Esse curso vai te ensinar Zeplin, a ferramenta que te permite ter uma comunicação rápida e eficaz com desenvolvedores e programadores Front-end.",
+          "duration": "22 hrs",
+          "level": "Iniciante",
+          "teacher": "Raul Souza",
+          "content": [
+              "Introdução ao Zeplin",
+              "Zeplin, diferença entre gratuito e pago.",
+              "Fazer download Zeplin.",
+              "Tipografias para tela",
+              "Trabalhando com cores em interfaces",
+              "Exportando assets - Styleguide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Marketing",
+      "courses": [
+        {
+          "id": 10,
+          "name": "Google Analytics ",
+          "logo": "https://developers.google.com/analytics/images/terms/logo_lockup_analytics_icon_vertical_black_2x.png?hl=pt",
+          "description": "Aprenda de uma vez a analisar com precisão o retorno do seu site, partindo do zero até o pouco explorado do Google Analytics.",
+          "duration": "37 hrs",
+          "level": "Iniciante",
+          "teacher": "Emerson Souza",
+          "content": [
+              "Introdução ao Google Analytics",
+              "Conseguindo o ID e código de acompanhamento",
+              "Atenção: Entenda seu código de acompanhamento",
+              "Última verificação: Propriedades e referências",
+              "Instalação manual por HTML e propriedades",
+              "Instalação por Google Tag Manager (GTM) no seu site"
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
