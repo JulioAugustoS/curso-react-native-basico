@@ -43,14 +43,30 @@ const Home = () => {
   return (
     <Container>
       <S.Logo source={logoImg} resizeMode="contain" />
-      <View>
-        <Content>
-          <Title size={18} weight="bold" color="gray2">Desenvolvimento</Title>
-        </Content>
-        <S.Swipper>
-          <Course image={reactImg} title="React" time={12} nivel="Iniciante" />
-        </S.Swipper>
-      </View>
+
+      {/* Mapear o estado de cursos para renderizar as categorias na tela */}
+      {coursesList.map((item, index) => (
+        /** Adicionar o index como unic key no componente View */
+        <View key={index}>
+          <Content>
+            {/* Substituir o nome do curso pela variavel referente ao nome retornado pelo map */}
+            <Title size={18} weight="bold" color="gray2">{item.category}</Title>
+          </Content>
+          <S.Swipper>
+            {/* Mapear o array courses dentro do item para listar os cursos */}
+            {item.courses.map((course) => (
+              /** Substituir os dados do curso pelos dados retornado no map */
+              <Course
+                key={course.id}
+                image={course.logo}
+                title={course.name}
+                time={course.duration}
+                nivel={course.level}
+              />
+            ))}
+          </S.Swipper>
+        </View>
+      ))}
     </Container>
   )
 }
