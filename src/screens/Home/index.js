@@ -54,27 +54,6 @@ const Home = () => {
           <Course image={vueImg} title="React" time={42} nivel="Avançado" />
         </S.Swipper>
       </View>
-
-      <View>
-        <Content>
-          <Title size={18} weight="bold" color="gray2">UI/UX</Title>
-        </Content>
-        <S.Swipper>
-          <Course image={figmaImg} title="Figma" time={6} nivel="Avançado" />
-          <Course image={sketchImg} title="Sketch" time={10} nivel="Iniciante" />
-          <Course image={zeplinImg} title="Zeplin" time={9} nivel="Iniciante" />
-        </S.Swipper>
-      </View>
-
-      <View>
-        <Content>
-          <Title size={18} weight="bold" color="gray2">Marketing</Title>
-        </Content>
-        <S.Swipper>
-          <Course image={googleAdsImg} title="Google Ads" time={6} nivel="Médio" />
-          <Course image={googleAnalyticsImg} title="Google Analytics" time={10} nivel="Iniciante" />
-        </S.Swipper>
-      </View>
     </Container>
   )
 }
