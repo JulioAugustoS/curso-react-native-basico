@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { View } from 'react-native'
 import list from './courses.json'
 
+// Context
+import { useCourses } from '../../context/courses'
+
 // Components
 import { Container, Content, Title, Course } from '../../components'
 
@@ -12,10 +15,15 @@ import * as S from './styles'
 import logoImg from '../../assets/images/logo.png'
 
 const Home = () => {
+  /** Desestruture o useCourses() para ter acesso ao estado e a função de atualizar
+   * o estado no contexto
+   */
+  const { coursesList, setCoursesList } = useCourses()
+
   /**
    * Criar o estado com o valor incial sendo um Array vazio
    */
-  const [coursesList, setCoursesList] = useState([])
+  // const [coursesList, setCoursesList] = useState([])
 
   /**
    * Executar o useEffect quando o componente for montado atualizando o estado com os dados dos cursos
