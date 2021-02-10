@@ -10,15 +10,6 @@ import * as S from './styles'
 
 // Images
 import logoImg from '../../assets/images/logo.png'
-import reactImg from '../../assets/images/react.png'
-import swiftImg from '../../assets/images/swift.png'
-import androidImg from '../../assets/images/android.png'
-import vueImg from '../../assets/images/vue.png'
-import figmaImg from '../../assets/images/figma.png'
-import sketchImg from '../../assets/images/sketch.png'
-import zeplinImg from '../../assets/images/zeplin.png'
-import googleAdsImg from '../../assets/images/google-ads.png'
-import googleAnalyticsImg from '../../assets/images/google-analytics.png'
 
 const Home = () => {
   /**
