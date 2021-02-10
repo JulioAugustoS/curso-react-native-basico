@@ -49,9 +49,6 @@ const Home = () => {
         </Content>
         <S.Swipper>
           <Course image={reactImg} title="React" time={12} nivel="Iniciante" />
-          <Course image={swiftImg} title="Swift" time={30} nivel="Iniciante" />
-          <Course image={androidImg} title="Android" time={52} nivel="Avançado" />
-          <Course image={vueImg} title="React" time={42} nivel="Avançado" />
         </S.Swipper>
       </View>
     </Container>
