@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { View } from 'react-native'
-import list from './courses.json'
 
 // Api
 import api from '../../config/api'
