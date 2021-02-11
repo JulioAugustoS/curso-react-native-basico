@@ -6,9 +6,9 @@ import { Icon, Title } from '../index'
 // Styles
 import * as S from './styles'
 
-const ItemList = ({ icon, text }) => {
+const ItemList = ({ icon, text, onPress }) => {
   return (
-    <S.Container>
+    <S.Container onPress={onPress}>
       <Icon uri={icon} />
       <S.Desc>
         <Title size={16} color="gray3">{text}</Title>
