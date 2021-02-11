@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { TouchableOpacity } from 'react-native'
+import { useRoute } from '@react-navigation/native'
 import YoutubePlayer from "react-native-youtube-iframe";
 
-// Context
-import { useCourses } from '../../context/courses'
+// Api
+import api from '../../config/api'
 
 // Components
 import {
@@ -26,15 +27,31 @@ import checkImg from '../../assets/icons/check.png'
 import circleImg from '../../assets/icons/circle.png'
 import chevronLeftImg from '../../assets/icons/chevron-left.png'
 
-const CourseDetails = () => {
-  const { coursesList } = useCourses()
+const CourseDetails = ({ navigation }) => {
+  const { params } = useRoute()
+  const [course, setCourse] = useState(null)
 
-  console.log("LIST: ", coursesList)
+  const findCourse = async () => {
+    try {
+      const res = await api.get(`/courses/${params.id}?_embed=comments`)
+
+      console.log("RETORNO DO CURSO: ", res)
+      setCourse(res.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    findCourse()
+  }, [])
+
+  console.log("CURSO: ", course)
 
   return (
     <Container>
       <S.ContentPlayer>
-        <S.BackButton>
+        <S.BackButton onPress={() => navigation.goBack()}>
           <Icon uri={chevronLeftImg} />
         </S.BackButton>
         <YoutubePlayer
@@ -46,9 +63,9 @@ const CourseDetails = () => {
       <Content>
         <S.InfosBase>
           <S.Infos>
-            <Title size={18} weight="bold" color="green">Introdução ao NodeJS</Title>
-            <Title size={16} color="gray2">Julio Augusto</Title>
-            <Title color="gray2">12 hrs</Title>
+            <Title size={18} weight="bold" color="green">{course?.content[0].title}</Title>
+            <Title size={16} color="gray2">{course?.teacher}</Title>
+            <Title color="gray2">{`${course?.duration} hrs`}</Title>
           </S.Infos>
           <TouchableOpacity onPress={() => {}}>
             <Icon uri={starImg} />
@@ -58,18 +75,16 @@ const CourseDetails = () => {
         <S.Section>
           <Title size={18} weight={600} color="gray2">Descrição</Title>
           <Title size={16} color="gray3">
-            Aprenda a criar aplicações com NodeJs utilizando o framework Express, se conectando a bancos de dados relacionais e não relacionais, tudo isso utilizando o JavaScript do lado do servidor.
+            {course?.description}
           </Title>
         </S.Section>
 
         <S.Section>
           <Title size={18} weight={600} color="gray2">Conteudo</Title>
           <S.List>
-            <ItemList icon={checkImg} text="Introdução do NodeJS" />
-            <ItemList icon={checkImg} text="Donwload e instalação do NodeJS" />
-            <ItemList icon={checkImg} text="Executando arquivos JavaScript no Node" />
-            <ItemList icon={checkImg} text="Respondendo requisições HTTP com Node" />
-            <ItemList icon={checkImg} text="Visão geral do NPM, Express e Nodemon" />
+            {course?.content.map((module, index) => (
+              <ItemList key={index} icon={checkImg} text={module?.title} />
+            ))}
           </S.List>
         </S.Section>
 
@@ -86,15 +101,14 @@ const CourseDetails = () => {
         </S.Section>
 
         <S.Section>
-          <Title color="black">2 comentários neste curso</Title>
-          <Comment
-            photo={circleImg}
-            comment="Ja tentei todas as soluções apresentadas. quanto tento reinstalar com a mudança sugerida, o mysql nem instala, fica dando erro."
-          />
-          <Comment
-            photo={circleImg}
-            comment="Estava com o mesmo problema, fiz da forma que o Victor disse e deu certo. Obrigado!"
-          />
+          <Title color="black">{`${course?.comments.length} comentários neste curso`}</Title>
+          {course?.comments.map((comment) => (
+            <Comment
+              key={comment.id}
+              photo={circleImg}
+              comment={comment.body}
+            />
+          ))}
         </S.Section>
       </Content>
     </Container>
