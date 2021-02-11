@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
 
 // Api
@@ -8,7 +8,7 @@ import api from '../../config/api'
 import { useCourses } from '../../context/courses'
 
 // Components
-import { Container, Content, Title, Course } from '../../components'
+import { Container, Content, Title, Course, Loading } from '../../components'
 
 // Styles
 import * as S from './styles'
@@ -18,6 +18,7 @@ import logoImg from '../../assets/images/logo.png'
 
 const Home = ({ navigation }) => {
   const { coursesList, setCoursesList } = useCourses()
+  const [loading, setLoading] = useState(true)
 
   const findCourses = async () => {
     try {
@@ -25,19 +26,22 @@ const Home = ({ navigation }) => {
 
       console.log("RETORNO DA CONSULTA: ", res)
       setCoursesList(res.data)
+      setLoading(false)
     } catch (err) {
       console.log(err)
+      setLoading(false)
     }
   }
 
   useEffect(() => {
-    findCourses()
+    setTimeout(() => {
+      findCourses()
+    }, 1000)
   }, []);
-
-  console.log("Lista de Cursos: ", coursesList)
 
   return (
     <Container>
+      {loading && <Loading />}
       <S.Logo source={logoImg} resizeMode="contain" />
       {coursesList.map((item, index) => (
         <View key={index}>
