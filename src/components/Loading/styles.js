@@ -2,7 +2,7 @@ import styled from 'styled-components/native'
 import { Dimensions } from 'react-native'
 
 const WIDTH = Dimensions.get('screen').width
-const HEIGHT = Dimensions.get('screen').height
+const HEIGHT = Dimensions.get('window').height
 
 export const Container = styled.View`
   width: ${WIDTH}px;

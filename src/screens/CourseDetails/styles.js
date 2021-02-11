@@ -1,7 +1,8 @@
 import styled from 'styled-components/native'
+import { Platform } from 'react-native'
 
 export const ContentPlayer = styled.View`
-  margin-top: 10px;
+  margin-top: ${Platform.OS === 'ios' ? 10 : 0}px;
 `
 
 export const BackButton = styled.TouchableOpacity`

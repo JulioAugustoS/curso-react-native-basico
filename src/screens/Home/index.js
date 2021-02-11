@@ -40,29 +40,31 @@ const Home = ({ navigation }) => {
   }, []);
 
   return (
-    <Container>
+    <>
       {loading && <Loading />}
-      <S.Logo source={logoImg} resizeMode="contain" />
-      {coursesList.map((item, index) => (
-        <View key={index}>
-          <Content>
-            <Title size={18} weight="bold" color="gray2">{item.category}</Title>
-          </Content>
-          <S.Swipper>
-            {item.courses.map((course) => (
-              <Course
-                key={course.id}
-                image={course.logo}
-                title={course.name}
-                time={course.duration}
-                nivel={course.level}
-                onPress={() => navigation.navigate('CourseDetail', { id: course.id })}
-              />
-            ))}
-          </S.Swipper>
-        </View>
-      ))}
-    </Container>
+      <Container>
+        <S.Logo source={logoImg} resizeMode="contain" />
+        {coursesList.map((item, index) => (
+          <View key={index}>
+            <Content>
+              <Title size={18} weight="bold" color="gray2">{item.category}</Title>
+            </Content>
+            <S.Swipper>
+              {item.courses.map((course) => (
+                <Course
+                  key={course.id}
+                  image={course.logo}
+                  title={course.name}
+                  time={course.duration}
+                  nivel={course.level}
+                  onPress={() => navigation.navigate('CourseDetail', { id: course.id })}
+                />
+              ))}
+            </S.Swipper>
+          </View>
+        ))}
+      </Container>
+    </>
   )
 }
 
