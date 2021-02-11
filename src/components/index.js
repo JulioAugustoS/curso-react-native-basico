@@ -9,6 +9,7 @@ import Container from './Container'
 import Content from './Content'
 import TextArea from './TextArea'
 import Comment from './Comment'
+import Loading from './Loading'
 
 export {
   Title,
@@ -21,5 +22,6 @@ export {
   Container,
   Content,
   TextArea,
-  Comment
+  Comment,
+  Loading
 }
